@@ -27,7 +27,7 @@ const template = () => (
 const getFallbackProps = (props) => ({
   template: props.template || template,
   theme: props.theme || theme,
-  pageSize: props.pageSize || "100vw 100vh",
+  pageSize: props.pageSize || "13.66in 7.68in",
   transition: props.transition
     ? {
         from: {

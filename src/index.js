@@ -37,9 +37,8 @@ const SlideFragments = () => (
   </>
 );
 
-const Presentation = (props) => (
+const Presentation = () => (
   <Deck>
-    {console.log(props)}
     <Slide>
       <FlexBox height="100%">
         <SpectacleLogo size={500} />
@@ -154,7 +153,9 @@ const Presentation = (props) => (
     </Slide>
     <SlideFragments />
     <Slide>
-      <CodePane language="jsx">{`
+      <Heading>Code</Heading>
+      <Box height={20} />
+      <CodePane language="jsx" highlightRanges={[1, 3]}>{`
         import { createClient, Provider } from 'urql';
 
         const client = createClient({ url: 'https://0ufyz.sse.codesandbox.io' });

@@ -21,7 +21,7 @@ const getHeadingFallbackProps = (props) => ({
   fontWeight: "bold",
   fontSize: "56px",
   lineHeight: "56px",
-  margin: 0,
+  margin: "0px",
 });
 
 export const Heading = (props = {}) => (
