@@ -3,11 +3,62 @@
   <head>
     <meta charset="utf-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Space+Grotesk:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Space+Grotesk:wght@600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      :root {
+        --black: #100c53;
+        --blue: #0000c2;
+        --purple: #8330ff;
+        --white: #f9fcfd;
+        --green: #46eca1;
+        --gray: rgb(207, 208, 220);
+        --gray50: rgba(207, 208, 220, 0.5);
+      }
+      #root > div {
+        background: var(--white) !important;
+      }
+      code {
+        font-family: "Space Mono", monospace !important;
+        background: var(--gray50);
+        padding: 0 0.4em;
+        font-size: inherit;
+        font-variant-ligatures: none;
+      }
+      pre {
+        background: var(--black) !important;
+      }
+      pre code {
+        background: none;
+        color: var(--white) !important;
+        text-shadow: none !important;
+      }
+      .react-syntax-highlighter-line-number {
+        color: var(--gray50) !important;
+      }
+      pre code .token[style="color: rgb(0, 119, 170);"] {
+        color: #b7b7ff !important;
+      }
+      pre code .token[style="color: rgb(221, 74, 104);"] {
+        color: #9752ff !important;
+      }
+      pre code .token[style="color: rgb(102, 153, 0);"] {
+        color: var(--green) !important;
+      }
+      pre code .token[style="color: rgb(153, 0, 85);"] {
+        color: #e81d8c !important;
+      }
+      pre
+        code
+        .token[style="color: rgb(154, 110, 58); background: rgba(255, 255, 255, 0.5);"] {
+        color: #e8b91d !important;
+        background: none !important;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

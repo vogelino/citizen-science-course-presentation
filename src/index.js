@@ -1,50 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import theme from './theme'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Slide } from "./components/slide";
+import { Heading, ListItem, Text, CodeSpan } from "./components/typography";
+import { Deck } from "./components/deck";
+import { CodePane } from "./components/codePane";
 
 import {
   FlexBox,
-  Heading,
   SpectacleLogo,
   UnorderedList,
-  CodeSpan,
   OrderedList,
-  ListItem,
-  FullScreen,
-  Progress,
   Appear,
-  Slide,
-  Deck,
-  Text,
   Grid,
   Box,
   Image,
-  CodePane,
-  MarkdownSlide,
-  MarkdownSlideSet,
-  Notes
-} from 'spectacle';
+  Notes,
+} from "spectacle";
 
 const formidableLogo =
-  'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
-
-// SPECTACLE_CLI_TEMPLATE_START
-const template = () => (
-  <FlexBox
-    justifyContent="space-between"
-    position="absolute"
-    bottom={0}
-    width={1}
-  >
-    <Box padding="0 1em">
-      <FullScreen />
-    </Box>
-    <Box padding="1em">
-      <Progress />
-    </Box>
-  </FlexBox>
-);
-// SPECTACLE_CLI_TEMPLATE_END
+  "https://avatars2.githubusercontent.com/u/5078602?s=280&v=4";
 
 const SlideFragments = () => (
   <>
@@ -63,8 +37,9 @@ const SlideFragments = () => (
   </>
 );
 
-const Presentation = () => (
-  <Deck theme={theme} template={template}>
+const Presentation = (props) => (
+  <Deck>
+    {console.log(props)}
     <Slide>
       <FlexBox height="100%">
         <SpectacleLogo size={500} />
@@ -78,14 +53,12 @@ const Presentation = () => (
       </Notes>
     </Slide>
     <Slide>
-      <FlexBox height="100%" flexDirection="column">
-        <Heading margin="0px" fontSize="150px">
+      <FlexBox height="100%" flexDirection="column" alignItems="start">
+        <Heading>
           ✨<i>Spectacle</i> ✨
         </Heading>
-        <Heading margin="0px" fontSize="h2">
-          A ReactJS Presentation Library
-        </Heading>
-        <Heading margin="0px 32px" color="primary" fontSize="h3">
+        <Heading>A ReactJS Presentation Library</Heading>
+        <Heading color="primary">
           Where you can write your decks in JSX, Markdown, or MDX!
         </Heading>
       </FlexBox>
@@ -93,17 +66,17 @@ const Presentation = () => (
     <Slide
       transition={{
         from: {
-          transform: 'scale(0.5) rotate(45deg)',
-          opacity: 0
+          transform: "scale(0.5) rotate(45deg)",
+          opacity: 0,
         },
         enter: {
-          transform: 'scale(1) rotate(0)',
-          opacity: 1
+          transform: "scale(1) rotate(0)",
+          opacity: 1,
         },
         leave: {
-          transform: 'scale(0.2) rotate(315deg)',
-          opacity: 0
-        }
+          transform: "scale(0.2) rotate(315deg)",
+          opacity: 0,
+        },
       }}
       backgroundColor="tertiary"
       backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/main/src/beau.jpg?raw=true)"
@@ -171,7 +144,7 @@ const Presentation = () => (
         gridRowGap={1}
       >
         {Array(9)
-          .fill('')
+          .fill("")
           .map((_, index) => (
             <FlexBox paddingTop={0} key={`formidable-logo-${index}`} flex={1}>
               <Image src={formidableLogo} width={100} />
@@ -201,30 +174,6 @@ const Presentation = () => (
         }
         `}</CodePane>
     </Slide>
-    <div>
-      <Slide>
-        <Heading>This is a slide embedded in a div</Heading>
-      </Slide>
-    </div>
-    <MarkdownSlide componentProps={{ color: 'yellow' }}>
-      {`
-        # This is a Markdown Slide
-
-        - You can pass props down to all elements on the slide.
-        - Just use the \`componentProps\` prop.
-        `}
-    </MarkdownSlide>
-    <MarkdownSlide animateListItems>
-      {`
-       # This is also a Markdown Slide
-
-       It uses the \`animateListItems\` prop.
-
-       - Its list items...
-       - they will appear in...
-       - one at a time.
-      `}
-    </MarkdownSlide>
     <Slide>
       <Grid
         flex={1}
@@ -242,8 +191,8 @@ const Presentation = () => (
         </FlexBox>
         <FlexBox alignItems="center" justifyContent="center">
           <Text textAlign="center">
-            It uses Spectacle <CodeSpan>{'<Grid />'}</CodeSpan> and{' '}
-            <CodeSpan>{'<FlexBox />'}</CodeSpan> components.
+            It uses Spectacle <CodeSpan>{"<Grid />"}</CodeSpan> and{" "}
+            <CodeSpan>{"<FlexBox />"}</CodeSpan> components.
           </Text>
         </FlexBox>
         <FlexBox alignItems="center" justifyContent="center">
@@ -251,14 +200,7 @@ const Presentation = () => (
         </FlexBox>
       </Grid>
     </Slide>
-    <MarkdownSlideSet>
-      {`
-        # This is the first slide of a Markdown Slide Set
-        ---
-        # This is the second slide of a Markdown Slide Set
-        `}
-    </MarkdownSlideSet>
   </Deck>
 );
 
-ReactDOM.render(<Presentation />, document.getElementById('root'));
+ReactDOM.render(<Presentation />, document.getElementById("root"));

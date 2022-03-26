@@ -1,17 +1,27 @@
-const fallbackFonts = 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji';
+const fallbackFonts =
+  "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji";
+
+const colors = {
+  black: "#100C53",
+  purple: "#8330ff",
+  blue: "#0000C2",
+  white: "#F9FCFD",
+  green: "#46eca1",
+  gray: "rgb(207,208,220)",
+};
 
 export default {
   colors: {
-    primary: '#f00',
-    secondary: '#00f',
-    backgroundColor: '#fff',
+    primary: colors.black,
+    secondary: colors.purple,
+    ...colors,
   },
   fonts: {
     header: `"Space Grotesk",${fallbackFonts}`,
-    text: `"Sora",${fallbackFonts}`
+    text: `"Sora",${fallbackFonts}`,
+    monospace: `"Space Mono",${fallbackFonts}`,
   },
   fontSizes: {
-    header: '64px',
-    paragraph: '28px'
-  }
-}
+    text: "32px",
+  },
+};
