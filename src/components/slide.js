@@ -23,8 +23,8 @@ const getFallbackProps = (props) => ({
     },
   },
   textAlign: "left",
-  ...props,
   padding: "88px 24px",
+  ...props,
 });
 
 export const TitleSlide = (props = {}) => (

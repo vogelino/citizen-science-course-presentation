@@ -1,10 +1,11 @@
 import React from "react";
 import { FlexBox, Notes } from "spectacle";
+import { Deck } from "../components/deck";
 import { Slide } from "../components/slide";
 import { Heading } from "../components/typography";
 
-export const IntroductionSlide = () => (
-  <>
+export default () => (
+  <Deck>
     <Slide noBreadcrumb>
       <FlexBox flexDirection="column" height="90%">
         <div>
@@ -52,5 +53,5 @@ export const IntroductionSlide = () => (
     <Slide breadcrumb="Warmup">
       <Heading fontSize="h1">Einführung zu Webentwicklung</Heading>
     </Slide>
-  </>
+  </Deck>
 );
