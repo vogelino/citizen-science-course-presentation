@@ -1,50 +1,53 @@
 import React from "react";
-import {
-  Box,
-  Deck as OriginalDeck,
-  FlexBox,
-  FullScreen,
-  Progress,
-} from "spectacle";
+import { Box, Deck as OriginalDeck, FlexBox, FullScreen } from "spectacle";
 import theme from "../theme";
+import { Text } from "./typography";
 
-const template = () => (
+const template = (props) => (
   <FlexBox
     justifyContent="space-between"
     position="absolute"
-    bottom={-1}
-    width={1}
+    bottom="16px"
+    width="calc(100% - 48px)"
+    padding="0 24px"
   >
-    <Box padding="0 1em">
-      <FullScreen color="gray" />
+    {console.log(props)}
+    <Box>
+      <FullScreen color={theme.colors.gray} />
     </Box>
-    <Box padding="1em">
-      <Progress color="gray" />
+    <Box>
+      <Text
+        fontSize="24px"
+        lineHeight="24px"
+        padding="0px"
+        color="gray"
+        fontFamily="monospace"
+      >
+        {props.slideNumber}/{props.numberOfSlides}
+      </Text>
     </Box>
   </FlexBox>
 );
 
 const getFallbackProps = (props) => ({
-  template: props.template || template,
-  theme: props.theme || theme,
-  pageSize: props.pageSize || "13.66in 7.68in",
-  transition: props.transition
-    ? {
-        from: {
-          opacity: 0,
-        },
-        enter: {
-          opacity: 1,
-        },
-        leave: {
-          opacity: 0,
-        },
-      }
-    : undefined,
+  template: template,
+  theme: theme,
+  pageSize: "13.66in 7.68in",
+  transition: {
+    from: {
+      opacity: 0,
+    },
+    enter: {
+      opacity: 1,
+    },
+    leave: {
+      opacity: 0,
+    },
+  },
 });
 
 export const Deck = (props = {}) => (
   <>
-    <OriginalDeck {...props} {...getFallbackProps(props)} />
+    <OriginalDeck {...getFallbackProps(props)} {...props} />
   </>
 );

@@ -8,6 +8,6 @@ const getFallbackProps = (props) => ({
 
 export const CodePane = (props = {}) => (
   <>
-    <OriginalCodePane {...props} {...getFallbackProps(props)} />
+    <OriginalCodePane {...getFallbackProps(props)} {...props} />
   </>
 );

@@ -16,16 +16,40 @@ const textSizedDefaults = {
   lineHeight: "48px",
 };
 
+const fontSizer = ({ fontSize }) => {
+  switch (fontSize) {
+    case "h1":
+      return "64px";
+    case "h2":
+      return "48px";
+    case "h3":
+      return "32px";
+    case "h4":
+      return "24px";
+    default:
+      return fontSize;
+  }
+};
+
 const getHeadingFallbackProps = (props) => ({
   ...commonToAll,
-  fontWeight: "bold",
-  fontSize: "56px",
-  lineHeight: "56px",
-  margin: "0px",
+  margin: "0px 0px 16px 0px",
+  padding: "0px",
+  ...props,
+  fontWeight: (({ fontSize, fontWeight }) => {
+    if (fontWeight) return fontWeight;
+    if (fontSize === "h2") return "normal";
+    return "bold";
+  })(props),
+  fontSize: fontSizer(props),
+  lineHeight: (({ fontSize, lineHeight }) => {
+    if (lineHeight) return lineHeight;
+    return fontSizer({ fontSize });
+  })(props),
 });
 
 export const Heading = (props = {}) => (
-  <OriginalHeading {...props} {...getHeadingFallbackProps(props)} />
+  <OriginalHeading {...getHeadingFallbackProps(props)} />
 );
 
 const getListItemFallbackProps = (props) => ({
@@ -34,16 +58,18 @@ const getListItemFallbackProps = (props) => ({
 });
 
 export const ListItem = (props = {}) => (
-  <OriginalListItem {...props} {...getListItemFallbackProps(props)} />
+  <OriginalListItem {...getListItemFallbackProps(props)} {...props} />
 );
 
 const getTextFallbackProps = (props) => ({
   ...commonToAll,
+  margin: "0px",
+  padding: "0px",
   ...textSizedDefaults,
 });
 
 export const Text = (props = {}) => (
-  <OriginalText {...props} {...getTextFallbackProps(props)} />
+  <OriginalText {...getTextFallbackProps(props)} {...props} />
 );
 
 const getCodeSpanFallbackProps = (props) => ({
@@ -54,5 +80,5 @@ const getCodeSpanFallbackProps = (props) => ({
 });
 
 export const CodeSpan = (props = {}) => (
-  <OriginalCodeSpan {...props} {...getCodeSpanFallbackProps(props)} />
+  <OriginalCodeSpan {...getCodeSpanFallbackProps(props)} {...props} />
 );

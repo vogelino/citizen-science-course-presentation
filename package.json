@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack",
-    "start": "webpack-dev-server --hot"
+    "dev": "webpack-dev-server --hot"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
