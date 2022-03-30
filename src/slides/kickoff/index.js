@@ -1,8 +1,11 @@
 import React from "react";
 import { FlexBox, Notes } from "spectacle";
-import { Deck } from "../components/deck";
-import { Slide } from "../components/slide";
-import { Heading } from "../components/typography";
+import { Deck } from "../../components/deck";
+import { Slide } from "../../components/slide";
+import { Heading } from "../../components/typography";
+import AboutMe from "./aboutMe";
+import AboutCourse from "./aboutCourse";
+import Welcome from "./welcome";
 
 export default () => (
   <Deck>
@@ -23,15 +26,9 @@ export default () => (
         </ol>
       </Notes>
     </Slide>
-    <Slide breadcrumb="Introduction">
-      <Heading fontSize="h1">Willkommen</Heading>
-    </Slide>
-    <Slide breadcrumb="Introduction">
-      <Heading fontSize="h1">Wer bin ich</Heading>
-    </Slide>
-    <Slide breadcrumb="Kursvorstellung">
-      <Heading fontSize="h1">Worum geht es?</Heading>
-    </Slide>
+    <Welcome />
+    <AboutMe />
+    <AboutCourse />
     <Slide breadcrumb="Kursvorstellung">
       <Heading fontSize="h1">Einschreibungsverfahren</Heading>
     </Slide>

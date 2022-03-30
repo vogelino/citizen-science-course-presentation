@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import { Box, Grid } from "spectacle";
 import { Deck } from "./components/deck";
 import { Slide } from "./components/slide";
@@ -15,7 +15,7 @@ const presentations = [
 ];
 
 const Presentation = () => (
-  <BrowserRouter>
+  <HashRouter basename={process.env.PUBLIC_URL || process.env.VERCEL_URL}>
     <Routes>
       <Route path="/">
         <Route
@@ -74,7 +74,7 @@ const Presentation = () => (
         ))}
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 ReactDOM.render(<Presentation />, document.getElementById("root"));
