@@ -19,7 +19,7 @@ export default {
   },
   fonts: {
     header: `"Space Grotesk",${fallbackFonts}`,
-    text: `"Sora",${fallbackFonts}`,
+    text: `"Space Grotesk",${fallbackFonts}`,
     monospace: `"Space Mono",${fallbackFonts}`,
   },
   fontSizes: {

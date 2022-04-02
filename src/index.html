@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Space+Grotesk:wght@400,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -62,6 +62,25 @@
       a:visited {
         color: var(--blue);
         text-underline-offset: 2px;
+      }
+      ol {
+        padding: 0 0 0 1em;
+      }
+      ul {
+        padding: 0;
+      }
+      ol li {
+        padding: 0.2em 0 !important;
+      }
+      ul li {
+        padding: 0.2em 0.5em !important;
+      }
+      ul li::marker {
+        color: var(--gray);
+      }
+      ol li::marker {
+        color: var(--purple);
+        font-family: "Space Mono", monospace;
       }
     </style>
   </head>

@@ -3,8 +3,10 @@ import { FlexBox, Notes } from "spectacle";
 import { Deck } from "../../components/deck";
 import { Slide } from "../../components/slide";
 import { Heading } from "../../components/typography";
-import AboutMe from "./aboutMe";
+import AboutUs from "./aboutUs";
 import AboutCourse from "./aboutCourse";
+import TheTechPart from "./theTechPart";
+import CitizenScience from "./citizenScience";
 import Welcome from "./welcome";
 
 export default () => (
@@ -27,28 +29,9 @@ export default () => (
       </Notes>
     </Slide>
     <Welcome />
-    <AboutMe />
+    <AboutUs />
     <AboutCourse />
-    <Slide breadcrumb="Kursvorstellung">
-      <Heading fontSize="h1">Einschreibungsverfahren</Heading>
-    </Slide>
-    <Slide breadcrumb="Kursvorstellung">
-      <Heading fontSize="h1">Kursprogramm</Heading>
-    </Slide>
-    <Slide breadcrumb="Kursvorstellung">
-      <Heading fontSize="h1">Kriterien für die Benotung</Heading>
-    </Slide>
-    <Slide breadcrumb="Über euch">
-      <Heading fontSize="h1">Wer seid ihr?</Heading>
-      <Heading fontSize="h2" color="black">
-        Formular schicken / Selfie
-      </Heading>
-    </Slide>
-    <Slide breadcrumb="Über euch">
-      <Heading fontSize="h1">Evaluation euer Skills</Heading>
-    </Slide>
-    <Slide breadcrumb="Warmup">
-      <Heading fontSize="h1">Einführung zu Webentwicklung</Heading>
-    </Slide>
+    <CitizenScience />
+    <TheTechPart />
   </Deck>
 );

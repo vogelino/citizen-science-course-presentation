@@ -2,20 +2,23 @@ import React from "react";
 import {
   Appear,
   Box,
-  Image,
+  FlexBox,
   ListItem,
-  Stepper,
+  Quote,
   UnorderedList,
 } from "spectacle";
 import { Slide } from "../../components/slide";
-import { Heading } from "../../components/typography";
+import { Heading, Text } from "../../components/typography";
 import goalsOfCitizenScience from "../../assets/images/stock/goals-of-citizen-science.jpg";
 import conductExperiments from "../../assets/images/stock/conduct-experiments.jpg";
 import communicateResults from "../../assets/images/stock/communicate-results.jpg";
+import { EdgeImage } from "../../components/edgeImage";
+import { SplitImage } from "../../components/splitImage";
 
 export default function AboutCourse() {
   return (
     <>
+      <Definition />
       <AboutCourseWhy />
       <AboutCourseHow />
       <AboutCourseThen />
@@ -23,75 +26,37 @@ export default function AboutCourse() {
   );
 }
 
-function EdgeImage({ src, width = "auto", height = "100%" }) {
+function Definition() {
   return (
-    <Box
-      position="absolute"
-      top="0px"
-      right="0px"
-      width="550px"
-      height="550px"
-      overflow="hidden"
-      borderBottomLeftRadius="90%"
-    >
-      <Box
-        width="100%"
-        height="100%"
-        backgroundColor="blue"
-        position="absolute"
-        right="0px"
-        top="0px"
-        opacity="0.5"
-        style={{ mixBlendMode: "lighten" }}
-      />
-      <Image
-        src={src}
-        width="550"
-        height="550"
-        style={{ objectFit: "cover" }}
-        objectFit="cover"
-      />
-    </Box>
-  );
-}
-
-function CitizenScience() {
-  return (
-    <ListItem>
-      <b>Citizen Science:</b> <br />
-      Involvierung von nicht-Wissenschaftler
-      <br /> in wissenschaftliche Tätigkeiten
-    </ListItem>
+    <Slide>
+      <Heading fontSize="h1">Citizen Science</Heading>
+      <FlexBox flexDirection="column" height="60%">
+        <Heading fontSize="h2" color="black" lineHeight="h2" padding="0 10%">
+          Die Teilnahme von nicht-Wissenschaftler und Amateure in Forschung und
+          andere wissenschaftliche Tätigkeiten
+        </Heading>
+      </FlexBox>
+    </Slide>
   );
 }
 
 function AboutCourseWhy() {
   return (
-    <Slide breadcrumb="Introduction">
-      <EdgeImage src={goalsOfCitizenScience} />
-      <Heading fontSize="h1">Worum geht es?</Heading>
+    <Slide>
+      <SplitImage src={goalsOfCitizenScience} boxProps={{ width: "40%" }} />
+      <Heading fontSize="h1">Ziele</Heading>
       <UnorderedList>
         <Appear>
-          <CitizenScience />
-        </Appear>
-        <Appear>
           <ListItem>
-            <b>Ziele sind</b>
+            Ein bestimmtes Umfeld oder Phänomen <br /> besser zu verstehen
           </ListItem>
         </Appear>
-        <UnorderedList>
-          <Appear>
-            <ListItem>
-              Ein bestimmtes Umfeld oder Phänomen <br /> besser zu verstehen
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Aufmerkamkeit auf ein Problem zu richten</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Die Politik auf Aktion anzuregen</ListItem>
-          </Appear>
-        </UnorderedList>
+        <Appear>
+          <ListItem>Aufmerkamkeit auf ein Problem zu richten</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Die Politik auf Aktion anzuregen</ListItem>
+        </Appear>
       </UnorderedList>
     </Slide>
   );
@@ -99,31 +64,25 @@ function AboutCourseWhy() {
 
 function AboutCourseHow() {
   return (
-    <Slide breadcrumb="Introduction">
-      <EdgeImage src={conductExperiments} />
-      <Heading fontSize="h1">Worum geht es?</Heading>
+    <Slide>
+      <SplitImage src={conductExperiments} boxProps={{ width: "40%" }} />
+      <Heading fontSize="h1">Konkret heisst es?</Heading>
       <UnorderedList>
-        <CitizenScience />
-        <ListItem>
-          <b>Konkret heisst es</b>
-        </ListItem>
-        <UnorderedList>
-          <Appear>
-            <ListItem>Daten aufnehmen</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Existierende Daten analysieren</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Das Umfeld beobachten</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Experimente Durchführen</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Theorien erproben</ListItem>
-          </Appear>
-        </UnorderedList>
+        <Appear>
+          <ListItem>Daten aufnehmen</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Existierende Daten analysieren</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Das Umfeld beobachten</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Experimente Durchführen</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Theorien erproben</ListItem>
+        </Appear>
       </UnorderedList>
     </Slide>
   );
@@ -131,14 +90,10 @@ function AboutCourseHow() {
 
 function AboutCourseThen() {
   return (
-    <Slide breadcrumb="Introduction">
-      <EdgeImage src={communicateResults} />
-      <Heading fontSize="h1">Worum geht es?</Heading>
-      <UnorderedList>
-        <CitizenScience />
-        <ListItem>
-          <b>Um schließlich...</b>
-        </ListItem>
+    <Slide>
+      <SplitImage src={communicateResults} boxProps={{ width: "40%" }} />
+      <Heading fontSize="h1">Um Schließlich...</Heading>
+      <Box width="60%">
         <UnorderedList>
           <Appear>
             <ListItem>
@@ -156,13 +111,12 @@ function AboutCourseThen() {
           </Appear>
           <Appear>
             <ListItem>
-              Ein Raum für Diskussion und Debatte zu schaffen
-              <br />
-              und die Fortsetzung der Recherche zu ermöglichen
+              Ein Raum für Diskussion und Debatte <br />
+              zu schaffen und die Fortsetzung der Recherche zu ermöglichen
             </ListItem>
           </Appear>
         </UnorderedList>
-      </UnorderedList>
+      </Box>
     </Slide>
   );
 }

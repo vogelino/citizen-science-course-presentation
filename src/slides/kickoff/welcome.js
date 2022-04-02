@@ -6,7 +6,7 @@ import makePlan from "../../assets/images/stock/make-a-plan.jpg";
 
 export default function Welcome() {
   return (
-    <Slide breadcrumb="Introduction">
+    <Slide>
       <Box position="absolute" right="0px" top="0px" width="40%" height="100%">
         <Box
           width="100%"

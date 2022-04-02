@@ -11,7 +11,6 @@ const template = (props) => (
     width="calc(100% - 48px)"
     padding="0 24px"
   >
-    {console.log(props)}
     <Box>
       <FullScreen color={theme.colors.gray} />
     </Box>

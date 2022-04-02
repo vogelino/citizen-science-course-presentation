@@ -23,7 +23,7 @@ const getFallbackProps = (props) => ({
     },
   },
   textAlign: "left",
-  padding: "88px 24px",
+  padding: "32px 56px",
   ...props,
 });
 
@@ -45,45 +45,5 @@ const dateToday = new Date().toLocaleDateString("de-DE", {
 });
 
 export const Slide = (props = {}) => (
-  <OriginalSlide {...getFallbackProps(props)}>
-    {!props.noBreadcrumb && (
-      <FlexBox
-        position="absolute"
-        top="24px"
-        width="calc(100% - 48px)"
-        justifyContent="space-between"
-        borderBottom="1px solid"
-        borderColor="grayLight"
-        padding="0 0 24px 0"
-      >
-        <FlexBox>
-          <Text {...breadcrumbProps}>Citizen Science</Text>
-          {props.breadcrumb && (
-            <>
-              <Text
-                {...breadcrumbProps}
-                color="gray"
-                opacity={0.5}
-                fontFamily="monospace"
-                padding="0px 12px"
-              >
-                {"->"}
-              </Text>
-              <Text {...breadcrumbProps}>{props.breadcrumb}</Text>
-            </>
-          )}
-        </FlexBox>
-        <Text
-          fontSize="16px"
-          lineHeight="24px"
-          color="gray"
-          fontFamily="monospace"
-          opacity={0.5}
-        >
-          {dateToday}
-        </Text>
-      </FlexBox>
-    )}
-    {props.children}
-  </OriginalSlide>
+  <OriginalSlide {...getFallbackProps(props)}>{props.children}</OriginalSlide>
 );
