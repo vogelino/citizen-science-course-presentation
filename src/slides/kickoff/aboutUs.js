@@ -143,7 +143,7 @@ function AboutCityLAB() {
   return (
     <Slide breadcrumb="Einführung">
       <SplitImage src={cityLab} />
-      <Heading fontSize="h1">Im CityLAB</Heading>
+      <Heading fontSize="h1">Das CityLAB</Heading>
       <FlexBox width="45%">
         <UnorderedList>
           <Appear>
@@ -191,7 +191,7 @@ function ProjectsCityLAB() {
   return (
     <Slide breadcrumb="Einführung">
       <SplitImage src={cityLab} />
-      <Heading fontSize="h1">Im CityLAB</Heading>
+      <Heading fontSize="h1">Das CityLAB</Heading>
       <Appear>
         <FloatingScreenshot
           boxProps={{

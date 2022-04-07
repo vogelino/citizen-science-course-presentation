@@ -4,9 +4,11 @@ import { Slide } from "../../components/slide";
 import { Heading, ListItem, Text } from "../../components/typography";
 import superkuehen from "../../assets/images/examples/superkuehen.jpg";
 import superkuehenMobile from "../../assets/images/examples/superkuehen-mobile.png";
+import superkuehenWebsite from "../../assets/images/examples/superkuehen-website.png";
 import stadtpuls from "../../assets/images/examples/stadtpuls.png";
 import fukushima from "../../assets/images/examples/fukushima.jpg";
 import stadtpulsStories from "../../assets/images/examples/stadtpuls-stories.png";
+import stadtpulsWebsite from "../../assets/images/examples/stadtpuls-website.png";
 import stadtpulsBg from "../../assets/images/examples/stadtpuls-bg.jpg";
 import mindTheFunghi from "../../assets/images/examples/mind-the-funghi.jpg";
 import muekenatlas from "../../assets/images/examples/muekenatlas.jpg";
@@ -79,12 +81,23 @@ function StadtpulsPart2() {
       <Box
         style={{ boxShadow: "0 2px 80px -40px rgba(0,0,0,1)" }}
         position="absolute"
-        bottom="-200px"
-        right="40px"
-        width="40%"
+        bottom="40px"
+        right="80px"
+        width="50%"
       >
-        <Image src={stadtpulsStories} width="100%" />
+        <Image src={stadtpulsWebsite} width="100%" />
       </Box>
+      <Appear>
+        <Box
+          style={{ boxShadow: "0 2px 80px -40px rgba(0,0,0,1)" }}
+          position="absolute"
+          bottom="-200px"
+          right="40px"
+          width="40%"
+        >
+          <Image src={stadtpulsStories} width="100%" />
+        </Box>
+      </Appear>
       <Notes>
         <ul>
           <li>Raum für Kommunikation über die Anwendung der Daten</li>
@@ -200,10 +213,24 @@ function Superkuehen() {
           }}
           position="absolute"
           bottom="-100px"
-          left="24%"
+          left="20%"
           width="20%"
         >
           <Image src={superkuehenMobile} width="100%" />
+        </Box>
+      </Appear>
+      <Appear>
+        <Box
+          style={{
+            boxShadow: "0 2px 80px -40px rgba(0,0,0,1)",
+            borderRadius: `27%`,
+          }}
+          position="absolute"
+          bottom="40px"
+          left="45%"
+          width="50%"
+        >
+          <Image src={superkuehenWebsite} width="100%" />
         </Box>
       </Appear>
       <Notes>
@@ -212,6 +239,8 @@ function Superkuehen() {
           <li>Involviert die Stadtgesellschat in eine Debatte über Konsum</li>
           <li>Ermöglicht ein Raum für Untersuchung der Daten</li>
           <li>Hohes Entertainment Charakter, zum Beteiligung aber Begrenzt</li>
+          <li>Rawdaten nicht zur Verfügung gestellt</li>
+          <li>Daten nicht vergleichbar</li>
         </ul>
       </Notes>
     </Slide>

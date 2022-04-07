@@ -3,6 +3,7 @@ import {
   Appear,
   Box,
   FlexBox,
+  Grid,
   ListItem,
   Notes,
   OrderedList,
@@ -24,6 +25,8 @@ export default function TheTechPart() {
       <ExperimentRules />
       <Homework />
       <InTheNextCourses />
+      <Plan />
+      <QANDA />
     </>
   );
 }
@@ -33,7 +36,8 @@ function Focus() {
     <Slide>
       <SplitImage src={coding} boxProps={{ width: "40%" }} />
       <Heading fontSize="h1">
-        Focus: <br /> Webprogrammierung 🌐
+        Focus: 🌐
+        <br /> Webprogrammierung
       </Heading>
       <FlexBox alignItems="center" justifyContent="start" height="70%">
         <UnorderedList>
@@ -203,6 +207,7 @@ function InTheNextCourses() {
         height="70%"
         width="90%"
         alignItems="start"
+        style={{ gap: "2em" }}
       >
         <Appear>
           <Heading fontSize="h2" color="black" lineHeight="h2">
@@ -214,11 +219,84 @@ function InTheNextCourses() {
             Fokus: Webentwicklung und Datenvisualisierung
           </Heading>
         </Appear>
-        <Appear>
-          <Heading fontSize="h2" color="black" lineHeight="h2">
-            Bin gespannt!
-          </Heading>
-        </Appear>
+      </FlexBox>
+    </Slide>
+  );
+}
+
+function Plan() {
+  return (
+    <Slide>
+      <Heading fontSize="h1">Kusprogramm</Heading>
+      <FlexBox
+        flexDirection="column"
+        height="70%"
+        width="100%"
+        alignItems="start"
+      >
+        <Grid gridTemplateColumns="repeat(2, 1fr)" gridGap="4em">
+          <Box>
+            <Appear>
+              <Heading fontSize="h2" color="black">
+                Phase 1
+              </Heading>
+            </Appear>
+            <UnorderedList>
+              <Appear>
+                <ListItem>Javascript Fundamentals</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>SVG & Markup</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>Daten Visualisierung mit D3</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>Mit Daten arbeiten</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>APIs Grundlagen</ListItem>
+              </Appear>
+            </UnorderedList>
+          </Box>
+          <Box>
+            <Appear>
+              <Heading fontSize="h2" color="black">
+                Phase 2
+              </Heading>
+            </Appear>
+            <UnorderedList>
+              <Appear>
+                <ListItem>Citizen Science + Stadtpuls</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>CityLAB Workshop</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>Ideenentwicklung + Support</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>Zwischenpräsentationen / Feedback</ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>Finale Präsentation</ListItem>
+              </Appear>
+            </UnorderedList>
+          </Box>
+        </Grid>
+      </FlexBox>
+    </Slide>
+  );
+}
+
+function QANDA() {
+  return (
+    <Slide>
+      <FlexBox alignItems="center" height="80%">
+        <Heading color="blue" fontSize="96px">
+          Danke! <br />
+          Noch Fragen / Anmerkungen?
+        </Heading>
       </FlexBox>
     </Slide>
   );
