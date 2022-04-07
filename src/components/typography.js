@@ -33,19 +33,12 @@ const fontSizer = ({ fontSize }) => {
 
 const getHeadingFallbackProps = (props) => ({
   ...commonToAll,
-  margin: "16px 0px 16px 0px",
+  margin: "16px 0px 0 0px",
   padding: "0px",
+  lineHeight: "1.2em",
+  fontWeight: "normal",
   ...props,
-  fontWeight: (({ fontSize, fontWeight }) => {
-    if (fontWeight) return fontWeight;
-    if (fontSize === "h2") return "normal";
-    return "bold";
-  })(props),
   fontSize: fontSizer(props),
-  lineHeight: (({ fontSize, lineHeight }) => {
-    if (lineHeight) return lineHeight;
-    return fontSizer({ fontSize });
-  })(props),
 });
 
 export const Heading = (props = {}) => (
@@ -55,6 +48,7 @@ export const Heading = (props = {}) => (
 const getListItemFallbackProps = (props) => ({
   ...commonToAll,
   ...textSizedDefaults,
+  ...props,
 });
 
 export const ListItem = (props = {}) => (

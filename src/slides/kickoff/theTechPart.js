@@ -13,16 +13,56 @@ import { SplitImage } from "../../components/splitImage";
 import { Heading, Text } from "../../components/typography";
 import experiment from "../../assets/images/stock/experiment.jpg";
 import homework from "../../assets/images/stock/homework.jpg";
+import coding from "../../assets/images/stock/coding.jpg";
 
 export default function TheTechPart() {
   return (
     <>
+      <Focus />
       <Interests />
       <Experiment />
       <ExperimentRules />
       <Homework />
       <InTheNextCourses />
     </>
+  );
+}
+
+function Focus() {
+  return (
+    <Slide>
+      <SplitImage src={coding} boxProps={{ width: "40%" }} />
+      <Heading fontSize="h1">
+        Focus: <br /> Webprogrammierung 🌐
+      </Heading>
+      <FlexBox alignItems="center" justifyContent="start" height="70%">
+        <UnorderedList>
+          <Appear>
+            <ListItem fontSize="40px">Mein Fachwissen</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem fontSize="40px">
+              Relevantes Werkzeug,
+              <br /> um mit Daten umzugehen
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem fontSize="40px">
+              Ermöglicht eine umfassende
+              <br /> Kommunikation
+            </ListItem>
+          </Appear>
+        </UnorderedList>
+      </FlexBox>
+      <Notes>
+        <ul>
+          <li>Warum coding?</li>
+          <li>Mein Fachwissen</li>
+          <li>Es geht um Daten</li>
+          <li>Wir sind ID und Internet ist unser canvas</li>
+        </ul>
+      </Notes>
+    </Slide>
   );
 }
 

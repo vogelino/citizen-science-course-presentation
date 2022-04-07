@@ -19,9 +19,6 @@
         --gray: rgb(207, 208, 220);
         --gray50: rgba(207, 208, 220, 0.5);
       }
-      #root > div > div {
-        background: var(--white);
-      }
       code {
         font-family: "Space Mono", monospace !important;
         background: var(--gray50);
@@ -64,16 +61,19 @@
         text-underline-offset: 2px;
       }
       ol {
-        padding: 0 0 0 1em;
+        padding: 0 0 0 1.5em;
       }
       ul {
-        padding: 0;
+        padding: 0 0 0 1em;
+        margin: 0 !important;
       }
       ol li {
+        margin: 0.8em 0 0 0 !important;
         padding: 0.2em 0 !important;
       }
       ul li {
-        padding: 0.2em 0.5em !important;
+        margin: 0.8em 0 0 0 !important;
+        padding: 0 !important;
       }
       ul li::marker {
         color: var(--gray);

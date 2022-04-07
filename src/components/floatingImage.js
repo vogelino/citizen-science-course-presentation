@@ -5,8 +5,8 @@ export function FloatingImage({ src }) {
   return (
     <Box
       position="absolute"
-      top="120px"
-      right="120px"
+      top="80px"
+      right="80px"
       width="300px"
       height="300px"
       borderRadius="50%"

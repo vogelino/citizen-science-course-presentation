@@ -77,4 +77,4 @@ const Presentation = () => (
   </HashRouter>
 );
 
-ReactDOM.render(<Presentation />, document.getElementById("root"));
+ReactDOM.render(<Kickoff />, document.getElementById("root"));

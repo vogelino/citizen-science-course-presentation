@@ -1,37 +1,36 @@
 import React from "react";
-import { FlexBox, Notes } from "spectacle";
 import { Deck } from "../../components/deck";
 import { Slide } from "../../components/slide";
-import { Heading } from "../../components/typography";
+import { Heading, Text } from "../../components/typography";
 import AboutUs from "./aboutUs";
-import AboutCourse from "./aboutCourse";
+import TheorieIntro from "./TheorieIntro";
 import TheTechPart from "./theTechPart";
-import CitizenScience from "./citizenScience";
+import TheorieOutro from "./TheorieOutro";
+import Examples from "./examples";
 import Welcome from "./welcome";
+import visualizing from "../../assets/images/stock/visualizing.jpg";
 
 export default () => (
   <Deck>
-    <Slide noBreadcrumb>
-      <FlexBox flexDirection="column" height="90%">
-        <div>
-          <Heading fontSize="h1">Citizen Science</Heading>
-          <Heading color="black" fontSize="h2">
-            Stadtdaten visualisieren
-          </Heading>
-        </div>
-      </FlexBox>
-      <Notes>
-        Spectacle supports notes per slide.
-        <ol>
-          <li>Notes can now be HTML markup!</li>
-          <li>Lists can make it easier to make points.</li>
-        </ol>
-      </Notes>
-    </Slide>
+    <IntroSlide />
     <Welcome />
     <AboutUs />
-    <AboutCourse />
-    <CitizenScience />
+    <TheorieIntro />
+    <Examples />
+    <TheorieOutro />
     <TheTechPart />
   </Deck>
 );
+
+function IntroSlide() {
+  return (
+    <Slide backgroundImage={`url("${visualizing}")`}>
+      <Heading color="white" fontSize="96px" fontWeight="bold">
+        Citizen Science
+      </Heading>
+      <Heading color="gray" fontSize="h1" margin="0px">
+        Stadtdaten visualisieren
+      </Heading>
+    </Slide>
+  );
+}
