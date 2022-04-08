@@ -32,8 +32,7 @@ export default function Welcome() {
         <ListItem>Freitag, 10:00 – 14:00</ListItem>
         <ListItem>Freitag, 15. April Keine Vorlesung (Karfreitag)</ListItem>
         <ListItem>Freitag, 13. Mai Remote Vorlesung</ListItem>
-        <ListItem>Raum 302</ListItem>
-        <ListItem>Max 16 Teilnehmer</ListItem>
+        <ListItem>Raum D106</ListItem>
       </UnorderedList>
     </Slide>
   );
