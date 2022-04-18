@@ -2,7 +2,7 @@ import React from "react";
 import { Box, ListItem, Image, UnorderedList } from "spectacle";
 import { Slide } from "../../components/slide";
 import { Heading } from "../../components/typography";
-import makePlan from "../../assets/images/stock/make-a-plan.jpg";
+import makePlan from "../../assets/images/01-course-kickoff/stock/make-a-plan.jpg";
 
 export default function Welcome() {
   return (

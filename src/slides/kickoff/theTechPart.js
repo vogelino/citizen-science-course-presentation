@@ -12,9 +12,9 @@ import {
 import { Slide } from "../../components/slide";
 import { SplitImage } from "../../components/splitImage";
 import { Heading, Text } from "../../components/typography";
-import experiment from "../../assets/images/stock/experiment.jpg";
-import homework from "../../assets/images/stock/homework.jpg";
-import coding from "../../assets/images/stock/coding.jpg";
+import experiment from "../../assets/images/01-course-kickoff/stock/experiment.jpg";
+import homework from "../../assets/images/01-course-kickoff/stock/homework.jpg";
+import coding from "../../assets/images/01-course-kickoff/stock/coding.jpg";
 
 export default function TheTechPart() {
   return (

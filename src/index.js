@@ -6,12 +6,15 @@ import { Deck } from "./components/deck";
 import { Slide } from "./components/slide";
 import { Heading, Text } from "./components/typography";
 import Kickoff from "./slides/kickoff";
-import Second from "./slides/second";
+import WebFundamentals from "./slides/webfundamentals";
 
 const presentations = [
-  { title: "First", path: "first", Component: Kickoff },
-  { title: "Second", path: "second", Component: Second },
-  { title: "Third", path: "third", Component: Second },
+  { title: "Course Kickoff", path: "kickoff", Component: Kickoff },
+  {
+    title: "Web Fundamentals",
+    path: "web-fundamentals",
+    Component: WebFundamentals,
+  },
 ];
 
 const Presentation = () => (
@@ -77,4 +80,4 @@ const Presentation = () => (
   </HashRouter>
 );
 
-ReactDOM.render(<Kickoff />, document.getElementById("root"));
+ReactDOM.render(<Presentation />, document.getElementById("root"));

@@ -8,7 +8,7 @@ import TheTechPart from "./theTechPart";
 import TheorieOutro from "./TheorieOutro";
 import Examples from "./examples";
 import Welcome from "./welcome";
-import visualizing from "../../assets/images/stock/visualizing.jpg";
+import visualizing from "../../assets/images/01-course-kickoff/stock/visualizing.jpg";
 
 export default () => (
   <Deck>

@@ -11,9 +11,9 @@ import {
 import { Slide } from "../../components/slide";
 import { SplitImage } from "../../components/splitImage";
 import { Heading, ListItem, Text } from "../../components/typography";
-import grenzen from "../../assets/images/stock/complexity.jpg";
-import openness from "../../assets/images/stock/openness.jpg";
-import interfaceD from "../../assets/images/stock/interface.jpg";
+import grenzen from "../../assets/images/01-course-kickoff/stock/complexity.jpg";
+import openness from "../../assets/images/01-course-kickoff/stock/openness.jpg";
+import interfaceD from "../../assets/images/01-course-kickoff/stock/interface.jpg";
 
 export default function TheorieOutro() {
   return (

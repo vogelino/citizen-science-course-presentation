@@ -2,16 +2,16 @@ import React from "react";
 import { Appear, Box, FlexBox, Image, Notes } from "spectacle";
 import { Slide } from "../../components/slide";
 import { Heading, ListItem, Text } from "../../components/typography";
-import superkuehen from "../../assets/images/examples/superkuehen.jpg";
-import superkuehenMobile from "../../assets/images/examples/superkuehen-mobile.png";
-import superkuehenWebsite from "../../assets/images/examples/superkuehen-website.png";
-import stadtpuls from "../../assets/images/examples/stadtpuls.png";
-import fukushima from "../../assets/images/examples/fukushima.jpg";
-import stadtpulsStories from "../../assets/images/examples/stadtpuls-stories.png";
-import stadtpulsWebsite from "../../assets/images/examples/stadtpuls-website.png";
-import stadtpulsBg from "../../assets/images/examples/stadtpuls-bg.jpg";
-import mindTheFunghi from "../../assets/images/examples/mind-the-funghi.jpg";
-import muekenatlas from "../../assets/images/examples/muekenatlas.jpg";
+import superkuehen from "../../assets/images/01-course-kickoff/examples/superkuehen.jpg";
+import superkuehenMobile from "../../assets/images/01-course-kickoff/examples/superkuehen-mobile.png";
+import superkuehenWebsite from "../../assets/images/01-course-kickoff/examples/superkuehen-website.png";
+import stadtpuls from "../../assets/images/01-course-kickoff/examples/stadtpuls.png";
+import fukushima from "../../assets/images/01-course-kickoff/examples/fukushima.jpg";
+import stadtpulsStories from "../../assets/images/01-course-kickoff/examples/stadtpuls-stories.png";
+import stadtpulsWebsite from "../../assets/images/01-course-kickoff/examples/stadtpuls-website.png";
+import stadtpulsBg from "../../assets/images/01-course-kickoff/examples/stadtpuls-bg.jpg";
+import mindTheFunghi from "../../assets/images/01-course-kickoff/examples/mind-the-funghi.jpg";
+import muekenatlas from "../../assets/images/01-course-kickoff/examples/muekenatlas.jpg";
 
 export default function AboutCourse() {
   return (
