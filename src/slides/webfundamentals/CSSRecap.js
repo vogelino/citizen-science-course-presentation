@@ -15,6 +15,7 @@ import cssStructure2 from "../../assets/images/02-web-fundamentals/graphics/CSSS
 import cssStructure3 from "../../assets/images/02-web-fundamentals/graphics/CSSStructure-003-Selector.svg";
 import cssStructure4 from "../../assets/images/02-web-fundamentals/graphics/CSSStructure-004-Property.svg";
 import cssStructure5 from "../../assets/images/02-web-fundamentals/graphics/CSSStructure-005-Value.svg";
+import browserCSSInterpretation from "../../assets/images/02-web-fundamentals/graphics/BrwoserCSSInterpretation.svg";
 import bemExample from "../../assets/images/02-web-fundamentals/screenshots/bem-example.jpg";
 import clips from "../../assets/images/02-web-fundamentals/stock/clips2.jpg";
 import { CodePane } from "../../components/codePane";
@@ -27,6 +28,7 @@ export default () => (
     <CSSSpecificityB />
     <CSSSpecificityC />
     <CSSEmbedd />
+    <CSSRecapConclusion />
   </>
 );
 
@@ -312,6 +314,53 @@ function CSSEmbedd() {
           </Appear>
         </UnorderedList>
       </FlexBox>
+    </Slide>
+  );
+}
+
+function CSSRecapConclusion() {
+  return (
+    <Slide>
+      <Box position="absolute" right="0px" top="0px" width="50%" height="100%">
+        <FlexBox
+          width="100%"
+          height="100%"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Image src={browserCSSInterpretation} />
+        </FlexBox>
+      </Box>
+      <Heading fontSize="h1">CSS 🎨: Zusammenfassung</Heading>
+      <Grid
+        width="90%"
+        height="90%"
+        alignItems="center"
+        justifyContent="start"
+        gridTemplateColumns="3fr 2fr"
+      >
+        <UnorderedList>
+          <Appear>
+            <ListItem>CSS ist Rohtext in einer .css-Datei</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Es zielt auf DOM (HTML)-Elemente ab und definiert deren Aussehen
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Die CSS-Regeln werden eine Spezifizität zugewiesen, welche
+              Überschreibungen determiniert
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              CSS kann als Datei, in einem Style-Tag oder inline gebunden werden
+            </ListItem>
+          </Appear>
+        </UnorderedList>
+      </Grid>
     </Slide>
   );
 }

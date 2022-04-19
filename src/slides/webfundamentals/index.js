@@ -2,9 +2,11 @@ import React from "react";
 import { Deck } from "../../components/deck";
 import { Slide } from "../../components/slide";
 import { Heading, ListItem } from "../../components/typography";
+import The3WebLanguages from "./The3WebLanguages";
 import HTMLRecap from "./HTMLRecap";
 import CSSRecap from "./CSSRecap";
 import WebRecap from "./WebRecap";
+import JsUsage from "./JsUsage";
 import code from "../../assets/images/02-web-fundamentals/stock/code.jpg";
 import toc from "../../assets/images/02-web-fundamentals/stock/toc.jpg";
 import { Appear, Box, UnorderedList, Image } from "spectacle";
@@ -13,9 +15,11 @@ export default () => (
   <Deck>
     <IntroSlide />
     <TOC />
+    <The3WebLanguages />
+    <WebRecap />
     <HTMLRecap />
     <CSSRecap />
-    <WebRecap />
+    <JsUsage />
   </Deck>
 );
 
@@ -54,19 +58,10 @@ function TOC() {
       <Heading fontSize="h1">Plan für heute</Heading>
       <UnorderedList>
         <Appear>
-          <ListItem>HTML / CSS Recap</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Statische vs. Dynamische Seiten</ListItem>
-        </Appear>
-        <Appear>
           <ListItem>Web Recap</ListItem>
         </Appear>
         <Appear>
           <ListItem>Die Anwendung von JavaScript</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Wann JavaScript nicht benutzen</ListItem>
         </Appear>
         <Appear>
           <ListItem>Javascript Grundlagen</ListItem>

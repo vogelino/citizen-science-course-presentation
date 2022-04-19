@@ -42,6 +42,7 @@ export default () => (
     <WebStatic001 />
     <WebDynamic001 />
     <SPA />
+    <Recap />
   </>
 );
 
@@ -317,6 +318,46 @@ function SPA() {
           <Image src={spa008} />
         </Box>
       </Appear>
+    </Slide>
+  );
+}
+
+function Recap() {
+  return (
+    <Slide>
+      <Heading fontSize="h1">Zusammenfassung</Heading>
+      <Grid
+        width="90%"
+        height="90%"
+        gridTemplateColumns="repeat(2, 1fr)"
+        gridGap="8em"
+        style={{ paddingTop: "4em" }}
+      >
+        <Box>
+          <Heading fontSize="h2">Statische Seiten</Heading>
+          <UnorderedList>
+            <Appear>
+              <ListItem>Immer gleich.</ListItem>
+              <ListItem>So wie sie sind (unverändert)</ListItem>
+              <ListItem>Sehr schnell und leicht gecached</ListItem>
+            </Appear>
+          </UnorderedList>
+        </Box>
+        <Box>
+          <Heading fontSize="h2">Dynamische Seiten</Heading>
+          <UnorderedList>
+            <Appear>
+              <ListItem>
+                <em>On the fly</em> hergestellt
+              </ListItem>
+              <ListItem>
+                Kombination von versch. Dateien und externe Daten
+              </ListItem>
+              <ListItem>Auf externe Faktoren zugeschnitten</ListItem>
+            </Appear>
+          </UnorderedList>
+        </Box>
+      </Grid>
     </Slide>
   );
 }

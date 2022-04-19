@@ -21,8 +21,8 @@ export default () => (
     <HTMLRecapBody />
     <HTMLRecapLisibility />
     <HTMLTags />
-    <HTMLNewsExample />
     <HTMLAttributes />
+    <HTMLNewsExample />
     <HTMLRecapConclusion />
   </>
 );
@@ -466,7 +466,7 @@ function HTMLRecapConclusion() {
           <Image src={browserHtmlInterpretation} />
         </FlexBox>
       </Box>
-      <Heading fontSize="h1">HTML: Zusammenfassung</Heading>
+      <Heading fontSize="h1">HTML 🗃: Zusammenfassung</Heading>
       <Grid
         width="90%"
         height="90%"
