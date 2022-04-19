@@ -10,70 +10,22 @@ import {
 } from "spectacle";
 import { Slide } from "../../components/slide";
 import { Heading, Text } from "../../components/typography";
-import toc from "../../assets/images/02-web-fundamentals/stock/toc.jpg";
 import cables from "../../assets/images/02-web-fundamentals/stock/cables.jpg";
 import browserHtmlInterpretation from "../../assets/images/02-web-fundamentals/graphics/BrowserHtmlInterpretation.svg";
 import { CodePane } from "../../components/codePane";
 
 export default () => (
   <>
-    <TOC />
     <HTMLRecapOverview />
     <HTMLRecapHead />
     <HTMLRecapBody />
     <HTMLRecapLisibility />
     <HTMLTags />
+    <HTMLNewsExample />
     <HTMLAttributes />
     <HTMLRecapConclusion />
   </>
 );
-
-function TOC() {
-  return (
-    <Slide>
-      <Box position="absolute" right="0px" top="0px" width="50%" height="100%">
-        <Box
-          width="100%"
-          height="100%"
-          position="absolute"
-          backgroundColor="blue"
-          style={{ mixBlendMode: "lighten" }}
-          opacity="0.5"
-        />
-        <Image
-          src={toc}
-          width="100%"
-          height="100%"
-          style={{ objectFit: "cover" }}
-        />
-      </Box>
-      <Heading fontSize="h1">Plan für heute</Heading>
-      <UnorderedList>
-        <Appear>
-          <ListItem>HTML / CSS Recap</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Statisch vs. Dynamische Seiten</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Web-Grundlagen</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Die Anwendung von JavaScript</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Wann JavaScript nicht benutzen</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Javascript Grundlagen</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Praktische übung</ListItem>
-        </Appear>
-      </UnorderedList>
-    </Slide>
-  );
-}
 
 function HTMLRecapOverview() {
   return (
@@ -105,8 +57,8 @@ function HTMLRecapOverview() {
           highlightRanges={[[3], [11], [10]]}
         >
           {`
-<!DOCTYPE html>
-<html lang="de">
+<!-- index.html -->
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -165,8 +117,8 @@ function HTMLRecapHead() {
           ]}
         >
           {`
-<!DOCTYPE html>
-<html lang="de">
+<!-- index.html -->
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -325,8 +277,8 @@ function HTMLRecapLisibility() {
       >
         <Box>
           <Text>
-            Die Qualität des Inhalts und seiner Struktur entscheidet darüber,
-            wie gut sie verstanden werden von:
+            Die Qualität des Inhalts und seiner Struktur bestimmt, wie gut die
+            Webseite verstanden wird von:
           </Text>
           <UnorderedList>
             <Appear>
@@ -344,6 +296,22 @@ function HTMLRecapLisibility() {
             </Appear>
           </UnorderedList>
         </Box>
+      </FlexBox>
+    </Slide>
+  );
+}
+
+function HTMLNewsExample() {
+  return (
+    <Slide>
+      <FlexBox alignItems="center" height="80%">
+        <Heading color="blue" fontSize="96px">
+          Beispiel:
+          <br />
+          <a href="https://www.smashingmagazine.com/" target="_blank">
+            Smashing Magazine
+          </a>
+        </Heading>
       </FlexBox>
     </Slide>
   );
@@ -467,6 +435,20 @@ function HTMLAttributes() {
         `}
         </CodePane>
       </Grid>
+      <Appear>
+        <Box
+          position="absolute"
+          right="11em"
+          top="24em"
+          padding="0.4em 2em 1.4em"
+          backgroundColor="white"
+          style={{ transform: "rotate(-2deg)" }}
+        >
+          <Heading fontSize="h3" color="blue">
+            Die Metadaten des Inhalts
+          </Heading>
+        </Box>
+      </Appear>
     </Slide>
   );
 }
