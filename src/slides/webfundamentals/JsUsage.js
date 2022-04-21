@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import {
   Appear,
   Box,
@@ -11,13 +11,25 @@ import {
 import { Slide } from "../../components/slide";
 import { Heading, Text } from "../../components/typography";
 import jsLogo from "../../assets/images/02-web-fundamentals/misc/js-logo.svg";
-import sdk from "@stackblitz/sdk";
+import CodeSlide from "../../components/CodeSlide";
 
 export default () => (
   <>
     <JSIntro />
     <JSUsage />
+    <JsVariables />
+    <JsPrimitives />
+    <JsObjects />
+    <JsArrays />
+    <JsOtherTypes />
+    <JsConditionals />
+    <JsFunctions />
+    <JsArrayMethods />
+    <JsDOMManipulation />
     <JsExample />
+    <JSUsageRecap />
+    <JsExerciseCSVToArray />
+    <JsExerciseCSVToInterestStats />
   </>
 );
 
@@ -60,7 +72,7 @@ function JSIntro() {
               </ListItem>
             </Appear>
             <Appear>
-              <ListItem>Die populärste Sprache der Welt</ListItem>
+              <ListItem>Die populärste Sprache der Welt nach Python</ListItem>
             </Appear>
           </UnorderedList>
         </FlexBox>
@@ -113,31 +125,6 @@ function JSUsage() {
   );
 }
 
-function JsExample() {
-  useEffect(() => {
-    const to = setTimeout(() => {
-      sdk.embedProjectId("js-example-embedd", "static-webpage", {
-        forceEmbedLayout: true,
-        openFile: "index.html",
-        theme: "light",
-        height: 700,
-      });
-    }, 1000);
-    return () => clearTimeout(to);
-  }, []);
-
-  return (
-    <Slide>
-      <Box position="absolute" right="0px" top="0px" width="100%" height="100%">
-        <div
-          id="js-example-embedd"
-          style={{ width: "100vw", height: "100vh" }}
-        />
-      </Box>
-    </Slide>
-  );
-}
-
 function JSUsageRecap() {
   return (
     <Slide>
@@ -167,17 +154,92 @@ function JSUsageRecap() {
               <ListItem>Auf Nutzerinteraktion reagieren</ListItem>
             </Appear>
             <Appear>
-              <ListItem>CSS Kassen setzen uns Stile anpassen</ListItem>
+              <ListItem>CSS-Klassen setzen uns Stile anpassen</ListItem>
             </Appear>
             <Appear>
               <ListItem>Daten laden</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Daten Persistieren</ListItem>
+              <ListItem>Daten persistieren</ListItem>
             </Appear>
           </UnorderedList>
         </FlexBox>
       </Grid>
     </Slide>
+  );
+}
+
+function JsVariables() {
+  return (
+    <CodeSlide
+      title="Variables"
+      stackBlitzId="js-course-variables"
+      stackBlitzOptions={{
+        hideExplorer: undefined,
+      }}
+    />
+  );
+}
+
+function JsPrimitives() {
+  return <CodeSlide title="Primitives" stackBlitzId="js-course-primitives" />;
+}
+
+function JsObjects() {
+  return <CodeSlide title="Objects" stackBlitzId="js-course-objects" />;
+}
+
+function JsArrays() {
+  return <CodeSlide title="Arrays" stackBlitzId="js-course-arrays" />;
+}
+
+function JsOtherTypes() {
+  return <CodeSlide title="Other Types" stackBlitzId="js-course-other-types" />;
+}
+
+function JsConditionals() {
+  return (
+    <CodeSlide title="Conditionals" stackBlitzId="js-course-conditionals" />
+  );
+}
+
+function JsFunctions() {
+  return <CodeSlide title="Functions" stackBlitzId="js-course-functions" />;
+}
+
+function JsArrayMethods() {
+  return (
+    <CodeSlide title="Array Methods" stackBlitzId="js-course-array-methods" />
+  );
+}
+
+function JsDOMManipulation() {
+  return (
+    <CodeSlide
+      title="DOM Manipulation"
+      stackBlitzId="js-course-dom-manipulation"
+    />
+  );
+}
+
+function JsExample() {
+  return <CodeSlide title="Tutti quanti" stackBlitzId="static-webpage" />;
+}
+
+function JsExerciseCSVToArray() {
+  return (
+    <CodeSlide
+      title="Exercise: CSV to Array"
+      stackBlitzId="js-course-exercise-csv-to-arrays"
+    />
+  );
+}
+
+function JsExerciseCSVToInterestStats() {
+  return (
+    <CodeSlide
+      title="Exercise: CSV to Interest Stats"
+      stackBlitzId="js-course-exercise-csv-to-interest-stats"
+    />
   );
 }

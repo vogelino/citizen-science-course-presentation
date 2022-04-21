@@ -7,6 +7,7 @@ import HTMLRecap from "./HTMLRecap";
 import CSSRecap from "./CSSRecap";
 import WebRecap from "./WebRecap";
 import JsUsage from "./JsUsage";
+import Outro from "./Outro";
 import code from "../../assets/images/02-web-fundamentals/stock/code.jpg";
 import toc from "../../assets/images/02-web-fundamentals/stock/toc.jpg";
 import { Appear, Box, UnorderedList, Image } from "spectacle";
@@ -20,6 +21,7 @@ export default () => (
     <HTMLRecap />
     <CSSRecap />
     <JsUsage />
+    <Outro />
   </Deck>
 );
 

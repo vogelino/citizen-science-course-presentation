@@ -19,9 +19,9 @@ export default () => (
     <HTMLRecapOverview />
     <HTMLRecapHead />
     <HTMLRecapBody />
-    <HTMLRecapLisibility />
-    <HTMLTags />
     <HTMLAttributes />
+    <HTMLTags />
+    <HTMLRecapLisibility />
     <HTMLNewsExample />
     <HTMLRecapConclusion />
   </>

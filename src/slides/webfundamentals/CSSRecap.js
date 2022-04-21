@@ -141,9 +141,7 @@ function CSSSpecificityB() {
                 </ListItem>
               </Appear>
               <Appear>
-                <ListItem>
-                  Wieviele keywords gibt es in ein CSS-Selector
-                </ListItem>
+                <ListItem>In welche Ebene die Stile definiert sind</ListItem>
               </Appear>
               <Appear>
                 <ListItem>usw.</ListItem>

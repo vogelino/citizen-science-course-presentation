@@ -337,9 +337,12 @@ function Recap() {
           <Heading fontSize="h2">Statische Seiten</Heading>
           <UnorderedList>
             <Appear>
-              <ListItem>Immer gleich.</ListItem>
               <ListItem>So wie sie sind (unverändert)</ListItem>
               <ListItem>Sehr schnell und leicht gecached</ListItem>
+              <ListItem>
+                Können nicht maß&shy;ge&shy;schneidert vom Server geliefert
+                werden
+              </ListItem>
             </Appear>
           </UnorderedList>
         </Box>
@@ -353,7 +356,8 @@ function Recap() {
               <ListItem>
                 Kombination von versch. Dateien und externe Daten
               </ListItem>
-              <ListItem>Auf externe Faktoren zugeschnitten</ListItem>
+              <ListItem>Maßgeschneidert auf externe Faktoren</ListItem>
+              <ListItem>In der Regel komplexer als statische Seiten</ListItem>
             </Appear>
           </UnorderedList>
         </Box>
