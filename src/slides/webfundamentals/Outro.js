@@ -28,14 +28,30 @@ function NextCourse() {
     <Slide>
       <SplitImage src={calendar} boxProps={{ width: "40%" }} />
       <Heading fontSize="h1">Nächstes Mal</Heading>
-      <UnorderedList>
-        <Appear>
-          <ListItem>Weitere Datenkonvertierungen</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Scalable Vector Graphics (SVG)</ListItem>
-        </Appear>
-      </UnorderedList>
+      <Box width="50%">
+        <UnorderedList>
+          <Appear>
+            <ListItem>Let's reiterate</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Array Methoden - Tieftauchgang</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Object-orientiertes vs. funktionales-Programmieren
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Ihr möchtet nicht erben, glaubt mir</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Scalable Vector Graphics (SVG)</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>CSS Übergänge und Animationen</ListItem>
+          </Appear>
+        </UnorderedList>
+      </Box>
     </Slide>
   );
 }
@@ -51,7 +67,7 @@ function HomeWork1() {
         <OrderedList>
           <Appear>
             <ListItem>
-              <b>Ein kleines Todo page entwickeln</b> <br />
+              <b>Kleine Todo-Seite entwickeln (mit CSS)</b> <br />
               <UnorderedList>
                 <Appear>
                   <ListItem>
