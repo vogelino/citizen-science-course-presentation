@@ -6,14 +6,20 @@ import { Deck } from "./components/deck";
 import { Slide } from "./components/slide";
 import { Heading, Text } from "./components/typography";
 import Kickoff from "./slides/kickoff";
-import WebFundamentals from "./slides/webfundamentals";
+import WebFundamentals1 from "./slides/webfundamentals";
+import WebFundamentals2 from "./slides/webfundamentals2";
 
 const presentations = [
   { title: "Course Kickoff", path: "kickoff", Component: Kickoff },
   {
-    title: "Web Fundamentals",
+    title: "Web Fundamentals 1",
     path: "web-fundamentals",
-    Component: WebFundamentals,
+    Component: WebFundamentals1,
+  },
+  {
+    title: "Web Fundamentals 2",
+    path: "web-fundamentals-2",
+    Component: WebFundamentals2,
   },
 ];
 
