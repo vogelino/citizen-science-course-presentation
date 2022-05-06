@@ -8,6 +8,7 @@ import { Heading, Text } from "./components/typography";
 import Kickoff from "./slides/kickoff";
 import WebFundamentals1 from "./slides/webfundamentals";
 import WebFundamentals2 from "./slides/webfundamentals2";
+import WebFundamentals3 from "./slides/webfundamentals3";
 
 const presentations = [
   { title: "Course Kickoff", path: "kickoff", Component: Kickoff },
@@ -20,6 +21,11 @@ const presentations = [
     title: "Web Fundamentals 2",
     path: "web-fundamentals-2",
     Component: WebFundamentals2,
+  },
+  {
+    title: "Web Fundamentals 3",
+    path: "web-fundamentals-3",
+    Component: WebFundamentals3,
   },
 ];
 
