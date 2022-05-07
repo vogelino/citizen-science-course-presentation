@@ -23,6 +23,7 @@ export default () => (
     <JsArrayMethodsIntro />
     <JsArrayMethodsHandsOn />
     <JsArrayMethodsExercise1 />
+    <JsArrayMethodsExercise1Solution />
     <JsArrayMethodsExercise2 />
     <JsArrayMethodsExercise3 />
     <JsArrayMethodsExercise4 />
@@ -93,6 +94,15 @@ function JsArrayMethodsExercise1() {
         </ListItem>
       </OrderedList>
     </Slide>
+  );
+}
+
+function JsArrayMethodsExercise1Solution() {
+  return (
+    <CodeSlide
+      title="Only Vegetarians"
+      stackBlitzId="js-course-exercise-filter-vegetarians-solution"
+    />
   );
 }
 
