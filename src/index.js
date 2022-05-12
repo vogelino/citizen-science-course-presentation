@@ -9,6 +9,7 @@ import Kickoff from "./slides/kickoff";
 import WebFundamentals1 from "./slides/webfundamentals";
 import WebFundamentals2 from "./slides/webfundamentals2";
 import WebFundamentals3 from "./slides/webfundamentals3";
+import ManipulateHTMLwithJs from "./slides/manipulateHTMLwithJs";
 
 const presentations = [
   { title: "Course Kickoff", path: "kickoff", Component: Kickoff },
@@ -26,6 +27,11 @@ const presentations = [
     title: "Web Fundamentals 3",
     path: "web-fundamentals-3",
     Component: WebFundamentals3,
+  },
+  {
+    title: "DOM Manipulation",
+    path: "html-manipulation-with-js",
+    Component: ManipulateHTMLwithJs,
   },
 ];
 
