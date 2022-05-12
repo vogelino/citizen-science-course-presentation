@@ -50,12 +50,7 @@
     },
   ];
 
-  const title = document.getElementsByTagName("h1")[0];
-  title.innerText = `Our ${people.length} participants`;
-
-  const propSorter = (prop) => (a, b) =>
-    b[prop] < a[prop] ? -1 : b[prop] > a[prop] ? 1 : 0;
-  const sortByDiet = propSorter("diet");
+  const sortByDiet = (a, b) => (b.diet < a.diet ? -1 : b.diet > a.diet ? 1 : 0);
 
   const ul = document.querySelector("ul");
   ul.innerHTML = "";

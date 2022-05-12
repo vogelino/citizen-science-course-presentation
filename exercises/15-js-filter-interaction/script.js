@@ -50,11 +50,6 @@
     },
   ];
 
-  const title = document.getElementsByTagName("h1")[0];
-  title.innerText = `Our ${people.length} participants`;
-
-  const getDietIdentifier = (prop, val) => (person) => person[prop] === val;
-
   const diets = ["vegan", "vegetarian", "freegan"];
 
   const createDomEl = (jsElement) => {
@@ -65,7 +60,7 @@
 
   const dietsMap = {};
   diets.forEach((diet) => {
-    const peopleInDiet = people.filter(getDietIdentifier("diet", diet));
+    const peopleInDiet = people.filter((person) => person.diet === diet);
     const dietDomLiElements = peopleInDiet.map(createDomEl);
     const dietUl = document.createElement("ul");
     dietUl.classList.add(diet);
@@ -79,23 +74,31 @@
 
   const buttons = Array.from(document.querySelectorAll("button"));
 
+  const styleButton = ({ activeFilter, button, diet }) => {
+    if (activeFilter && activeFilter !== diet) {
+      button.classList.add("inactive");
+    } else {
+      button.classList.remove("inactive");
+    }
+  };
+
+  const styleUl = ({ activeFilter, ulEl, diet }) => {
+    ulEl.classList.add("inactive");
+    if (!activeFilter || activeFilter === diet) {
+      ulEl.classList.remove("inactive");
+    }
+  };
+
   const onDietFilterClick = (evt) => {
     const dietClicked = evt.target.innerText.trim().toLowerCase();
     activeFilter = activeFilter === dietClicked ? null : dietClicked;
     Object.keys(dietsMap).forEach((diet) => {
       const ulEl = dietsMap[diet];
-      ulEl.classList.add("inactive");
-      if (!activeFilter || activeFilter === diet) {
-        ulEl.classList.remove("inactive");
-      }
+      styleUl({ activeFilter, ulEl, diet });
     });
     buttons.forEach((button) => {
       const diet = button.innerText.trim().toLowerCase();
-      if (activeFilter && activeFilter !== diet) {
-        button.classList.add("inactive");
-      } else {
-        button.classList.remove("inactive");
-      }
+      styleButton({ activeFilter, button, diet });
     });
   };
 

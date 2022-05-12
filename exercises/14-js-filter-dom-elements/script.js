@@ -50,11 +50,6 @@
     },
   ];
 
-  const title = document.getElementsByTagName("h1")[0];
-  title.innerText = `Our ${people.length} participants`;
-
-  const getDietIdentifier = (prop, val) => (person) => person[prop] === val;
-
   const diets = ["vegan", "vegetarian", "freegan"];
 
   const createDomEl = (jsElement) => {
@@ -65,7 +60,7 @@
   };
 
   diets.forEach((diet) => {
-    const peopleInDiet = people.filter(getDietIdentifier("diet", diet));
+    const peopleInDiet = people.filter((person) => person.diet === diet);
     const dietDomLiElements = peopleInDiet.map(createDomEl);
     const dietUl = document.createElement("ul");
     dietDomLiElements.forEach((domEl) => {
