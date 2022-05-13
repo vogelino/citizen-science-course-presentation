@@ -4,13 +4,11 @@ import { Slide } from "../../components/slide";
 import { Heading, ListItem } from "../../components/typography";
 import html from "../../assets/images/05-dom-manipulation/stock/html.jpg";
 import HTMLWithJs from "./HTMLWithJs";
-import ExerciseRecap from "./ExerciseRecap";
 import Exercises from "./Exercises";
 
 export default () => (
   <Deck>
     <IntroSlide />
-    <ExerciseRecap />
     <HTMLWithJs />
     <Exercises />
   </Deck>
