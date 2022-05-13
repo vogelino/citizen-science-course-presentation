@@ -54,7 +54,8 @@
 
   const ul = document.querySelector("ul");
   ul.innerHTML = "";
-  people.sort(sortByDiet).forEach((jsElement) => {
+  const sortedPeople = people.sort(sortByDiet);
+  sortedPeople.forEach((jsElement) => {
     const newDomElement = document.createElement("li");
     newDomElement.innerHTML = jsElement.name;
     newDomElement.classList.add(jsElement.diet);

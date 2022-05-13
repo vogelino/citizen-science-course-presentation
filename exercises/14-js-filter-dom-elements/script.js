@@ -59,7 +59,7 @@
     return newDomElement;
   };
 
-  diets.forEach((diet) => {
+  const addDietList = (diet) => {
     const peopleInDiet = people.filter((person) => person.diet === diet);
     const dietDomLiElements = peopleInDiet.map(createDomEl);
     const dietUl = document.createElement("ul");
@@ -67,5 +67,7 @@
       dietUl.appendChild(domEl);
     });
     document.body.appendChild(dietUl);
-  }, {});
+  };
+
+  diets.forEach(addDietList);
 }

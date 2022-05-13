@@ -72,7 +72,7 @@
 
   let activeFilter = null; // Either null or a diet string
 
-  const buttons = Array.from(document.querySelectorAll("button"));
+  const buttons = Array.from(document.getElementsByTagName("button"));
 
   const styleButton = ({ activeFilter, button, diet }) => {
     if (activeFilter && activeFilter !== diet) {
