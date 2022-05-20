@@ -8,7 +8,7 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 5%;
   padding: 24px;
   list-style: none;
   margin: 0;
@@ -46,8 +46,8 @@ body {
   place-content: center;
   place-items: center;
   display: flex;
-  font-size: 72px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 10vw;
+  font-family: sans-serif;
   content: var(--id);
   transform: rotate3d(0,1,0,180deg);
 }
