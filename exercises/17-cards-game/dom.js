@@ -1,9 +1,16 @@
 import { randomInRange } from "./utils.js";
 
+// Utility to quicky create elements with a specific class
+const createEl = (className, tag = "div") => {
+  // If not specified, the tag is a div 👆
+  const el = document.createElement(tag); // We create the element
+  el.classList.add(className); // We add the class to it
+  return el; // We return the element
+};
+
 // We become the state
 const createDomCard = ({ id, sign, color }) => {
-  const card = document.createElement("li"); // And create the DOM element
-  card.classList.add("card"); // Set the class card to it
+  const card = createEl("card", "li"); // And create the DOM element
   // We use the state to set properties
   card.setAttribute("id", `card-${id}`); // Such as the ID
 
@@ -21,6 +28,13 @@ const createDomCard = ({ id, sign, color }) => {
       `scale(1)`,
     ].join(" ")
   );
+
+  const front = createEl("front"); // We create the front div
+  front.innerText = sign; // Set the sign as text to the front
+  card.appendChild(front); // Append the front div to the card
+
+  const back = createEl("back"); // We create the back div
+  card.appendChild(back); // Append the back div to the card
 
   return card; // We return the card
 };

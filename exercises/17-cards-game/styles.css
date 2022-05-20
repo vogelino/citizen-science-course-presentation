@@ -22,8 +22,8 @@ body {
   perspective: 400px;
 }
 
-.card::before,
-.card::after {
+.card .back,
+.card .front {
   content: ' ';
   position: absolute;
   top: 0;
@@ -36,11 +36,11 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
 }
 
-.card::before {
+.card .back {
   background: #344966;
 }
 
-.card::after {
+.card .front {
   background: var(--color);
   color: white;
   place-content: center;
@@ -52,27 +52,27 @@ body {
   transform: rotate3d(0,1,0,180deg);
 }
 
-.card:not(.flipped):not(.matched):hover::before {
+.card:not(.flipped):not(.matched):hover .back {
   transform: translate3d(0,-10px,0) rotate3d(0,0,0,180deg) scale(1.05) !important;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .4);
   cursor: pointer;
 }
 
-.card:not(.flipped):not(.matched):hover::after {
+.card:not(.flipped):not(.matched):hover .front {
   transform: translate3d(0,-10px,0) rotate3d(0,1,0,180deg) scale(1.05) !important;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .4);
   cursor: pointer;
 }
 
-.card.matched::before,
-.card.flipped::before {
+.card.matched .back,
+.card.flipped .back {
   transform: translate3d(0,-10px,0) rotate3d(0,1,0,180deg) scale(1.05) !important;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .4);
   cursor: pointer;
 }
 
-.card.matched::after,
-.card.flipped::after {
+.card.matched .front,
+.card.flipped .front {
   transform: translate3d(0,-10px,0) rotate3d(0,0,0,180deg) scale(1.05) !important;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .4);
   cursor: pointer;
